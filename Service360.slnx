@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="Directory.Build.props.xml" />
+  </Folder>
+  <Project Path="Service360.API/Service360.API.csproj" />
+  <Project Path="Service360.Application/Service360.Application.csproj" />
+  <Project Path="Service360.Domain/Service360.Domain.csproj" />
+  <Project Path="Service360.Infrastructure/Service360.Infrastructure.csproj" />
+  <Project Path="Service360.Shared/Service360.Shared.csproj" />
+  <Project Path="Service360.Tests/Service360.Tests.csproj" />
+  <Project Path="Servis360.Persistence/Service360.Persistence.csproj" />
+</Solution>

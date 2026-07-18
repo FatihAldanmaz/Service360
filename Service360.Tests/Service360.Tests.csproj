@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" Version="6.0.2" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.12.0" />
+    <PackageReference Include="xunit" Version="2.9.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Service360.API\Service360.API.csproj" />
+    <ProjectReference Include="..\Service360.Application\Service360.Application.csproj" />
+    <ProjectReference Include="..\Service360.Domain\Service360.Domain.csproj" />
+    <ProjectReference Include="..\Service360.Infrastructure\Service360.Infrastructure.csproj" />
+    <ProjectReference Include="..\Service360.Shared\Service360.Shared.csproj" />
+    <ProjectReference Include="..\Servis360.Persistence\Service360.Persistence.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="IntegrationTests\" />
+    <Folder Include="TestHelpers\" />
+    <Folder Include="UnitTests\" />
+  </ItemGroup>
+
+</Project>
