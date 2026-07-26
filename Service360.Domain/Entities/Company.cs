@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Service360.Domain.Common;
-
-namespace Service360.Domain.Entities
+﻿namespace Service360.Domain.Entities
 {
     public class Company : AuditableEntity
     {
