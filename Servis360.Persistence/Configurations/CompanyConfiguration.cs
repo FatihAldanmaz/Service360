@@ -1,11 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Service360.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Service360.Persistence.Configurations
 {
@@ -22,6 +17,7 @@ namespace Service360.Persistence.Configurations
             builder.Property(x => x.PhoneNumber).HasMaxLength(20);
             builder.Property(x => x.TaxNumber).HasMaxLength(20);
             builder.Property(x => x.Address).HasMaxLength(500);
+
         }
     }
 }
