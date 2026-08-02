@@ -19,14 +19,25 @@ namespace Service360.Infrastructure.Services
             _configuration = configuration;
         }
 
-        public AuthResponse GenerateToken(AppUser user)
+        public AuthResponse GenerateToken(AppUser user, IList<string> roles)
         {
             var claims = new List<Claim>
             {
                 new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
                 new Claim(JwtRegisteredClaimNames.Email, user.Email ?? string.Empty),
+            
+                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+                new Claim(ClaimTypes.Email, user.Email ?? string.Empty),
+            
+                new Claim("companyId", user.CompanyId.ToString()),
+            
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
             };
+
+            foreach (var role in roles)
+            {
+                claims.Add(new Claim(ClaimTypes.Role, role));
+            }
 
             var key = new SymmetricSecurityKey(
         Encoding.UTF8.GetBytes(_configuration["Jwt:SecretKey"]!));
